@@ -8,21 +8,35 @@
 </head>
 
 <body>
-    <p id="para">My name is Hasnain and i am from Pakistan.</p><button id="button">See More</button>
+    <p id="para">My name is Hasnain and i am from Pakistan and my city name is karachi.</p><button id="button"
+        style="display: none;">See
+        More</button>
 </body>
 <script>
+    // var para = document.getElementById('para')
+    // var butn = document.getElementById('button')
+    // function seemore() {
+    //     if (butn.innerText == 'See More') {
+    //         para.innerHTML = "My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>"
+    //         butn.innerText = 'See Less'
+    //     } else {
+    //         para.innerText = "My name is Hasnain and i am from Pakistan."
+    //         butn.innerText = 'See More'
+    //     }
+    // }
+    // button.addEventListener('click', seemore)
+
     var para = document.getElementById('para')
     var butn = document.getElementById('button')
-    function seemore() {
-        if (butn.innerText == 'See More') {
-            para.innerHTML = "My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>"
-            butn.innerText = 'See Less'
-        } else {
-            para.innerText = "My name is Hasnain and i am from Pakistan."
-            butn.innerText = 'See More'
-        }
+    var converting = para.innerText.split(' ')
+    var changepara = converting.slice(0, 11)
+    if (converting.length > 10) {
+        para.innerText = changepara.join(' ')
+        butn.innerText = 'See Less'
+        butn = butn.style.display = "inline"
+    } else {
+
     }
-    button.addEventListener('click', seemore)
 
 </script>
 
