@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See more</title>
+</head>
+
+<body>
+    <p id="para">My name is Hasnain and i am from Pakistan.</p><button id="button">See More</button>
+</body>
+<script>
+    var para = document.getElementById('para')
+    var butn = document.getElementById('button')
+    function seemore() {
+        if (butn.innerText == 'See More') {
+            para.innerHTML = "My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>My name is Hasnain and i am from Pakistan.<br>"
+            butn.innerText = 'See Less'
+        } else {
+            para.innerText = "My name is Hasnain and i am from Pakistan."
+            butn.innerText = 'See More'
+        }
+    }
+    button.addEventListener('click', seemore)
+
+</script>
+
+</html>
